@@ -8,3 +8,46 @@ Referenced from this SO:
 http://stackoverflow.com/questions/12964021/script-to-install-app-in-ios-simulator
 
 
+# Debugging:
+
+LLDB works really nice from the command line
+
+    # Attach LLDB to a given process
+    $lldb   -attach-name fruitstrap-demo
+
+    # Set a breakpoint for an objc method
+    (lldb) br s -S fire:
+
+    # Continue to the next line in a breakpoint
+    (lldb)n
+
+    # Continue
+    (lldb)c
+
+    # Stop
+    (lldb)ctrl-c
+
+    # Show all breakpoints
+    (lldb) br list
+
+    # Disable all breakpoints
+    (lldb) br disable
+
+    # Enable all breakpoints
+    (lldb) br enable
+
+There is also a nice plugin for vim
+https://github.com/gilligan/vim-lldb 
+
+It is possible to tail the simulator by opening the logs:
+
+    # Read the system log of the simulator
+    $ tail -f ~/Library/Logs/iOS\ Simulator/7.0.3/system.log
+
+Imagine all of the possiblities:
+
+    # Read the system log of the simulator
+    $ tail -f ~/Library/Logs/iOS\ Simulator/7.0.3/system.log | grep SomeString
+
+
+
