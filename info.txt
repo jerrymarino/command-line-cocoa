@@ -1,0 +1,10 @@
+
+Installation of an app on the simulator can be achieved with the sript
+provided here:
+
+http://psellos.com/ios/iossim-command-line.html
+
+Referenced from this SO:
+http://stackoverflow.com/questions/12964021/script-to-install-app-in-ios-simulator
+
+
