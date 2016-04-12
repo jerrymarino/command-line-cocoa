@@ -1,5 +1,7 @@
-This is a collection of notes and scripts about doing iOS
-development from the command line.
+# Command line Cocoa
+
+Command line Cocoa is a collection of notes about and scripts for
+doing iOS development from the command line.
 
 ## Installing onto the simulator
 
@@ -13,9 +15,21 @@ from the command line.
 the simulator. I got the idea from here:
 <http://stackoverflow.com/questions/12964021/script-to-install-app-in-ios-simulator>
 
+## Simulator Log Reading
+
+It is possible to tail the simulator by opening the logs:
+
+    # Read the system log of the simulator
+    $ tail -f ~/Library/Logs/iOS\ Simulator/7.0.3/system.log
+
+Imagine all of the possiblities:
+
+    # Read the system log of the simulator
+    $ tail -f ~/Library/Logs/iOS\ Simulator/7.0.3/system.log | grep SomeString
+
 ## Debugging:
 
-LLDB is the debugger that Xcode uses http://lldb.llvm.org
+LLDB is a fantastic debugger. <http://lldb.llvm.org> A build of LLDB is included with Xcode.
 
 LLDB works really nice from the command line
 
@@ -44,19 +58,5 @@ LLDB works really nice from the command line
     (lldb) br enable
 
 There is also a lldb plugin for vim
-https://github.com/gilligan/vim-lldb 
-
-## Simulator Log Reading
-
-It is possible to tail the simulator by opening the logs:
-
-    # Read the system log of the simulator
-    $ tail -f ~/Library/Logs/iOS\ Simulator/7.0.3/system.log
-
-Imagine all of the possiblities:
-
-    # Read the system log of the simulator
-    $ tail -f ~/Library/Logs/iOS\ Simulator/7.0.3/system.log | grep SomeString
-
-
+<https://github.com/gilligan/vim-lldb>
 
