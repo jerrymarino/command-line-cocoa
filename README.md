@@ -1,22 +1,26 @@
+This is a collection of notes and scripts about doing iOS
+development from the command line.
 
 ## Installing onto the simulator
 
-Installation of an app on the simulator can be achieved with the sript
-provided here:
+Installing and running an app on the simulator can be achieved
+from the command line.
 
-http://psellos.com/ios/iossim-command-line.html
+`runsim` is a script to do so. More about the script is here
+<http://psellos.com/ios/iossim-command-line.html>
 
-Referenced from this SO:
-http://stackoverflow.com/questions/12964021/script-to-install-app-in-ios-simulator
-
-I've added these scipts to this repo
+`installsim` is a script to install an entire .app package onto
+the simulator. I got the idea from here:
+<http://stackoverflow.com/questions/12964021/script-to-install-app-in-ios-simulator>
 
 ## Debugging:
+
+LLDB is the debugger that Xcode uses http://lldb.llvm.org
 
 LLDB works really nice from the command line
 
     # Attach LLDB to a given process
-    $lldb   -attach-name fruitstrap-demo
+    $lldb   -attach-name some-app-process
 
     # Set a breakpoint for an objc method
     (lldb) br s -S fire:
@@ -39,8 +43,8 @@ LLDB works really nice from the command line
     # Enable all breakpoints
     (lldb) br enable
 
-
-There is also a lldb plugin for vim https://github.com/gilligan/vim-lldb 
+There is also a lldb plugin for vim
+https://github.com/gilligan/vim-lldb 
 
 ## Simulator Log Reading
 
