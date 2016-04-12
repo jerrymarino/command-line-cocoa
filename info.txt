@@ -1,4 +1,6 @@
 
+## Installing onto the simulator
+
 Installation of an app on the simulator can be achieved with the sript
 provided here:
 
@@ -7,8 +9,9 @@ http://psellos.com/ios/iossim-command-line.html
 Referenced from this SO:
 http://stackoverflow.com/questions/12964021/script-to-install-app-in-ios-simulator
 
+I've added these scipts to this repo
 
-# Debugging:
+## Debugging:
 
 LLDB works really nice from the command line
 
@@ -36,8 +39,10 @@ LLDB works really nice from the command line
     # Enable all breakpoints
     (lldb) br enable
 
-There is also a nice plugin for vim
-https://github.com/gilligan/vim-lldb 
+
+There is also a lldb plugin for vim https://github.com/gilligan/vim-lldb 
+
+## Simulator Log Reading
 
 It is possible to tail the simulator by opening the logs:
 
